@@ -1,0 +1,20 @@
+testing specs for photographers:
+name: string
+caption: text
+
+-name must be present
+-name must be between 5 characters & 50 characters
+-caption must be present 10> & 150<
+-photographers_id must be present
+
+
+-photographers name must be present
+-name must be between 3 & 40
+-email must be present
+-email must be unique
+-email must be valid
+
+
+  
+  
+ 
