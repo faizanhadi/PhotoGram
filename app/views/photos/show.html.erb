@@ -14,6 +14,9 @@
     <%= link_to "Edit", edit_photo_path(@photo), class: "btn btn-success pull-right" %>
     <h3 >
       <p>
+        <div class= "show_photo">
+          <%= image_tag(@photo.picture.url, class: "gravatar") if @photo.picture? %>
+        </div>
         <strong><%=@photo.caption%></strong>
       </p>
     </h3>
