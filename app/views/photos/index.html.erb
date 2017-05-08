@@ -1,0 +1,26 @@
+<%= render 'shared/page_title', title: "Recently Uploaded" %>
+
+<% @photos.each do |photo| %>
+  
+  <div class="row">
+    
+    <div class = "col-md-2">
+      <section class = "photographer_info center">
+        
+        <%= gravatar_for photo.photographer, size:100 %>
+        <h5><bold>Photographer: <%=photo.photographer.pname%></bold></h5>
+      </section>
+    </div>
+    
+    <div class = "col-lg-8 well">
+      <h4><%= link_to photo.name, photo_path(photo)%></h4>
+      <p><%= photo.caption%></p>
+      <p>
+        <span class='quiet'><small><%= time_ago_in_words(photo.created_at)%></small></span>
+      </p>
+      
+       
+    </div>
+  </div>
+  <hr/>
+<%end%>

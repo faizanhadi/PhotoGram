@@ -1,0 +1,23 @@
+
+<%= render 'shared/page_title', title: @photo.name %>
+
+
+
+<div class = "row">
+  <div class = "col-md-4 pull-right center">
+    <%=gravatar_for @photo.photographer, size: 200%>
+    <p>
+      <h5>Captured by <%= @photo.photographer.pname %></h5>
+    </p>
+  </div>
+  <div class = "col-md-8">
+    <%= link_to "Edit", edit_photo_path(@photo), class: "btn btn-success pull-right" %>
+    <h3 >
+      <p>
+        <strong><%=@photo.caption%></strong>
+      </p>
+    </h3>
+  </div>
+</div>
+
+<h5><%= link_to "Return to all", photos_path, class: "btn btn-warning btn-small"%></h5>
